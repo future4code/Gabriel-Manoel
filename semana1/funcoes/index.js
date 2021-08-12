@@ -105,27 +105,34 @@ Uma das utilidades desse comando seria para verificar se um cadastro foi preechi
 // console.log(mensagem())
 
 
+
 // ============= Exercicio 03 ====================
-let num1 = Number(prompt('Digite um número'))
-let num2 = Number(prompt('Digite outro número'))
+// let num1 = Number(prompt('Digite um número'))
+// let num2 = Number(prompt('Digite outro número'))
 
-const soma = () => {
-    resposta = num1 + num2
-    return resposta
-}
-
-const subtracao = () => {
-    reposta = num1 * num2
-    return resposta
-}
-
-const multiplicacão = () => {
+// const soma = () => {
     
-}
+//     return num1 + num2
+// }
 
-const divisão = () => {
+// const subtracao = () => {
     
-}
+//     return num1 - num2
+// }
 
-//console.log(`Soma: ${soma()}`)
-console.log(`Diferença: ${subtracao()}`)
+// const multiplicacao = () => {
+    
+//     return num1 * num2
+// }
+
+// const divisao = () => {
+    
+//     return num1 / num2
+// }
+
+// console.log(`Números inseridos: ${num1} e ${num2}`)
+// console.log(`Soma: ${soma()}`)
+// console.log(`Diferença: ${subtracao()}`)
+// console.log(`Multiplicação: ${multiplicacao()}`)
+// console.log(`Divisão: ${divisao()}`)
+
