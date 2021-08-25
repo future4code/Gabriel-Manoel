@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
     <title>Adicionar Produto</title>
 </head>
-<body>
-    <div>
-        <p>Nome da lojinha</p>
+<body class="produto">
+    <div class="nome">
+        <p>info web</p>
     </div>
     
-    <div>
+    <div class="linck">
         <a href="./index.html">Página Inicial</a>
         <a href="./ctrl-estoque.html">Controle de Estoque</a>
         <a href="./add-produto.html">Adicionar Produto</a>
@@ -20,33 +21,33 @@
 
     
     <h2>Adicionar Produto</h2>
-    <form action="">
-        <div>
+    <form action="" class="form_produtos">
+        <div class="div_produtos">
             <label for="link-foto">Link para foto: </label>
             <input type="url" id="link-foto" name="link-foto">
         </div>
         
-        <div>
+        <div class="div_produtos">
             <label for="descricao">Descrição do produto: </label>
             <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descrição">
+            <input type="text" id="descricao-do-produto" name="descrição">
         </div>
         
-        <div>
+        <div class="div_produtos">
             <label for="preco">Preço (em R$): </label>
             <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="text" id="preco" name="preço">
+            <input type="text" id="valor" name="preço">
         </div>
         
-        <div>
+        <div class="div_produtos">
             <!-- Preencha as propriedades necessárias para os elementos abaixo -->
             <label>Quantidade disponível: </label>
-            <input type="number" id="qtd" name="qtd">
+            <input  type="number" id="qtd" name="qtd">
         </div>
 
-        <div class="form-add">
+        <div class="form-add" class="div_produtos">
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="number" >Adicionar</button>
+            <button id ="form-add" type="submit" >Adicionar</button>
         </div>
 
     </form>
