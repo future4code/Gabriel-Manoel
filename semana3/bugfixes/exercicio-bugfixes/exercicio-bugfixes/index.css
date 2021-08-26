@@ -3,6 +3,33 @@
   *  ESTILOS GERAIS 
   *
   **/
+  button:active{
+      color: white;
+      background-color: #ffd000;
+  }
+
+  #back-button > a:active{
+      color: white;
+      
+  }
+  button#back-button {
+    background-color: yellow;
+}
+
+button#back-button:active{
+    color: white;
+  background-color: yellow;
+}
+
+  
+  button > a{
+      text-decoration: none;
+      color: black;
+  }
+ 
+  
+
+/* ========================= */
 
 * {
     margin: 0;
