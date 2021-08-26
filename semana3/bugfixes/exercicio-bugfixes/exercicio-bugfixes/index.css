@@ -12,9 +12,7 @@
       color: white;
       
   }
-  button#back-button {
-    background-color: yellow;
-}
+
 
 button#back-button:active{
     color: white;
@@ -88,6 +86,7 @@ div img {
 }
 
 .icone {
+    width: 15px;
     height: 15px;
 }
 
@@ -132,6 +131,7 @@ div:last-child {
 table {
     text-align: center;
     width: 60%;
+    margin: 0 auto;
 }
 
 td button {
@@ -149,6 +149,9 @@ td button {
 
 
 #back-button {
+    display: grid;
+    align-items: center;
+    margin: 50px auto;
     background-color: white;
     width: 100px;
     height: 20px;
@@ -160,4 +163,9 @@ td button {
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+#back-button:active{
+    color: white;
+    background-color: yellow;
 }
