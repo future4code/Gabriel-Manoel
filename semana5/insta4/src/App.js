@@ -1,36 +1,31 @@
 import React from 'react';
-import styled from 'styled-components'
+import './App.css';
 import Post from './components/Post/Post';
+import Usuario from './components/DadosUsuario/Usuario'
 
-const MainContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`
 
 class App extends React.Component {
   render() {
     return (
-      <MainContainer>
+      <div className={'app-container'}>
+        <Usuario
+               dadosMap
+
+/>
         <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
+          nomeUsuario={'joao'}
+          fotoUsuario={'https://picsum.photos/50/51'}
+          fotoPost={'https://picsum.photos/200/151'}
         />
         <Post
-          nomeUsuario={'Carlos'}
-          fotoUsuario={'https://picsum.photos/51/50'}
-          fotoPost={'https://picsum.photos/201/150'}
+          nomeUsuario={'amanda'}
+          fotoUsuario={'https://picsum.photos/50/52'}
+          fotoPost={'https://picsum.photos/200/152'}
         />
-        <Post
-          nomeUsuario={'Fábio'}
-          fotoUsuario={'https://picsum.photos/52/50'}
-          fotoPost={'https://picsum.photos/202/150'}
-        />
-      </MainContainer>
+      </div>
     );
   }
 }
 
 export default App;
+
