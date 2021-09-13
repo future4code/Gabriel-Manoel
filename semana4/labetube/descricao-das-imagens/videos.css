@@ -5,6 +5,11 @@
 }
 
 
+html,body{
+    max-width: 100vw;
+}
+
+
 /* container ====================================== */
 
 .container{
@@ -47,6 +52,10 @@ header{
       align-items: center;
       text-align: center;
       justify-content: center;
+
+      height: 100vh;
+      
+
   }
 
   main h2{
@@ -56,6 +65,14 @@ header{
 
   main p {
       margin-top: 8px;
+  }
+
+
+
+  
+  main video{
+      max-width: 800px; 
+      min-width: 300px;
   }
 
 
@@ -69,3 +86,19 @@ footer{
     background:linear-gradient(45deg, black , rgb(252, 252, 252)50%,black 100%) ;
     
 }
+
+
+
+
+@media screen and (min-device-width:260px) and (max-device-width: 800px){
+    main video{
+        max-width: 300px; 
+        
+    }
+
+    header input{
+        width: 150px;
+                
+     }
+}
+

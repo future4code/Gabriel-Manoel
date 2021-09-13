@@ -1,0 +1,11 @@
+
+
+@media screen and (min-device-width: 296px)and (max-device-width: 480px){
+    main{
+        padding-bottom: 100vh;
+        margin: 15px 8px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

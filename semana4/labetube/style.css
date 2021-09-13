@@ -5,6 +5,7 @@
 }
 
 
+
 /* container ====================================== */
 
 .container{
@@ -50,6 +51,7 @@ header input:active{
 /* main =========================================== */
 
 main{
+
     padding-bottom: 300px;
     margin-top: 15px;
     display: grid;
@@ -58,6 +60,15 @@ main{
     gap:10px 10px;
     align-items: center;
     justify-content: center;
+
+    padding-bottom: 100vh;
+    margin: 15px 8px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:10px 10px;
+    justify-items: center;
+
 }
 div.imagem {
     width:100%;

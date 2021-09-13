@@ -1,0 +1,188 @@
+img{
+    height: 150px;
+}
+
+body{
+    background-color: rgb(187, 183, 183);
+}
+
+h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Pagiana de vendas============================== */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto 0 auto;
+    background-color: blue;
+    color: white;
+}
+.number{
+    width: 75px;
+}
+
+span{
+    margin: 8px 0 3px 0;
+    display: block;
+}
+#pagamento{
+    width: 72px;
+}
+
+.enviar{
+    margin-top: 5px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(45, 154, 179);
+    margin: 50px 0 0 0;
+    width: 145px;
+    height: 30px;
+}
+
+/* Historico de vendas ============================*/
+
+.Data{
+    font-size:15px;
+    font-weight: bold;
+}
+.data{
+    border: none;
+    border-radius: 3px;
+    background-color: chocolate;
+    height: 20px;
+}
+
+/* Inicio ==================================*/
+
+.inicio{
+    display: grid;
+    text-align: center;
+}
+
+div a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(10, 10, 10);
+}
+
+div a:hover{
+    color: rgb(210, 66, 30);
+}
+
+div img {
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+   
+}
+
+/* Funcionarios */
+#funcionarios{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.loja{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#funcionarios h2{
+    text-align: center;
+}
+#funcionarios ol {
+    display: grid;
+    justify-content: center;
+    padding: 0;
+}
+/* Estoque ============================================= */
+.estoque{
+    display: grid;
+
+}
+
+
+.estoque div  {
+    text-align: center;
+}
+.paragrafo{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.estoque h2 {
+    text-align: center;
+}
+
+.table tr th{
+    border:1px solid black;
+    padding: 5px;
+}
+
+.table tr td{
+    border:1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+/* produto ====================================== */
+
+.form_produtos{
+    display: grid;
+    justify-content: center;
+}
+
+.nome{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.linck{
+    text-align: center;
+}
+
+.produto div p{
+    text-align: center;
+}
+
+.produto h2 {
+    text-align: center;
+}
+
+.div_produtos{
+    margin-top: 10px;
+}
+
+.div_produtos input{
+    border: none;
+    background-color: rgb(162, 162, 181);
+    outline: none;
+    padding-inline-start: 5px;
+    border-radius: 2px;
+    color: rgb(34, 30, 30);
+    height: 25px;
+}
+
+#form-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 2px;
+    background-color: teal;
+    margin: 14px auto 0 auto;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    
+}

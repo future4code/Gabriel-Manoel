@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+}
+body, html{
+    height: 100%;
+}
+
+.home{
+    background:linear-gradient(45deg, rgb(0, 0, 0), rgb(109, 99, 99), rgb(0, 0, 0) );
+    background-repeat: no-repeat;
+}
+
+/* header-nav ========================================= */
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 30px ;
+}
+
+.nav-header{
+  width: 300px;
+}
+.ul-header{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+li.header{
+    margin: 10px;
+}
+
+/* Foto ============================= */
+.foto{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.foto img{
+    border-radius: 100%;
+}
+.foto p {
+    margin-top: 15px;
+}
+
+/* instituição de ensino ======================= */
+.instituicao-de-ensino{
+    text-align: center;
+    padding-top: 15px;
+}
+/* sobre ============================== */
+
+.sobre{
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Habilidades =============================== */
+.div-habilidades{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.ul-habilidades{
+    display: flex;
+    justify-content: center;
+}
+
+.li-habilidade{
+    padding-left: 20px;
+}
+/* div-relative ============== */
+.div-relative{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    position: relative;
+}
+
+/* rede social ========================= */
+.rede_social{
+    position: absolute;
+    bottom: 0px;
+
+}
+
+.ul-rede-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.li-rede-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.li-rede-social a{
+   font-size: 30px;
+}
+
+ 
+
+
+
+/* form ============================================ */
+
+.Form{
+   display: grid;
+   justify-content: center;
+   width: 40%;
+   margin: 50px auto;
+   background-color: aqua;
+   border-radius: 30px;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.h1-form{
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 40px;
+}
+
+.nome{
+    width: 100px;
+    height: 20px;
+    padding-inline-start: 4px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(181, 186, 194);
+    
+}
+.email{
+    width: 300px;
+    height: 20px;
+    padding-inline-start: 4px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(181, 186, 194);
+}
+.mensagem{
+    padding-inline-start: 4px;
+    padding-top: 4px;
+    color: black;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(181, 186, 194);
+}
+.input-enviar{
+    margin-bottom: 10px;
+    width: 100px;
+    border-radius: 4px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+    background-color: rgb(115, 115, 211);
+}
+
+.input-enviar:active{
+    background-color: rgb(73, 73, 213);
+}
+
