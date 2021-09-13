@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* container ====================================== */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+
+
+
+/* header ====================== */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(8, 245, 233);
+  height: 100px;
+}
+
+header h2{
+   padding-left: 10px;
+}
+
+header input{
+   width: 100px;
+   height: 30px;
+   padding-inline-start: 8px;
+   margin-right: 25px;
+   outline: none;
+   border: none;
+   border-radius: 3px;
+}
+
+header input::placeholder{
+    color: rgb(53, 119, 96);
+}
+header input:active{
+    background-color: darkblue;
+}
+
+/* main =========================================== */
+
+main{
+    padding-bottom: 100vh;
+    margin: 15px 8px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:10px 10px;
+    justify-items: center;
+}
+div.imagem {
+    width:100%;
+    margin: 5px;
+    border: 1px solid blue;
+   
+}
+
+div.imagem p{
+  margin: 15px 0px 15px 10px ;
+}
+
+.imagem img{
+    width: 100%;
+    height: auto;
+}
+
+/* footer =============================================== */
+
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(45deg, black , rgb(252, 252, 252)50%,black 100%) ;
+    
+}
+
