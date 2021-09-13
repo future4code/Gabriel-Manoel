@@ -1,6 +1,15 @@
-
+*{
+   margin: 0;
+   padding: 0;
+}
 
 
 .label_form_etapa1{
-   display:block;    
+   display:block;  
+   margin: 16px;  
+}
+
+button{
+   margin: 16px;
+   height: px;
 }

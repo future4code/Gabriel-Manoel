@@ -1,12 +1,12 @@
 import React from 'react';
 import Etapa1 from './componentes/Etapa1';
 import Etapa2 from './componentes/Etapa2';
-
+import './App.css'
 
 export default class app extends React.Component {
    
   dado = {
-    cadastro:false
+    cadastro:true
   };
 
   cadastrado = () => {

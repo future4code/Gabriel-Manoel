@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Etapa2.css'
 
 function Etapa2() {
     return (
