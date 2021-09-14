@@ -6,7 +6,7 @@ import './App.css'
 export default class app extends React.Component {
    
   dado = {
-    cadastro:true
+    cadastro:false
   };
 
   cadastrado = () => {
