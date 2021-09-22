@@ -1,14 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
+import styled from 'styled-components';
+import TelaCadastro from './components/TelaCadastro';
+import TelaListaUsuario from './components/TelaListaUsuario';
 
-import Userlist from './components/UserList';
-import Register from './components/Register';
-function App() {
-  return (
-    <div className="App">
-      <Register />
-      <Userlist />
-    </div>
-  );
+
+const Div =styled.div`
+ 
+`
+
+export default class App extends React.Component {
+  state = {
+    telaAtual: "cadastro"
+  }
+
+  escolheTela = () => {
+    switch (this.state.telaAtual) {
+      case "cadastro":
+        return <TelaCadastro irParaLista={this.irParaLista} />
+      case "lista":
+        return <TelaListaUsuario irParaCadastro={this.irParaCadastro} />
+      default:
+        return <div>Erro! Pagina não encontrada:</div>
+    }
+  }
+
+  irParaCadastro = () => {
+    this.setState({ telaAtual: "cadastro" })
+  }
+
+  irParaLista = () => {
+    this.setState({ telaAtual: "lista" })
+  }
+
+  render() {
+    return (
+      <Div>
+        {this.escolheTela()}
+      </Div>
+    )
+  }
 }
-
-export default App;
