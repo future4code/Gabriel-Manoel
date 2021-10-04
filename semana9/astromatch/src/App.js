@@ -36,7 +36,6 @@ export default class App extends React.Component {
   render() {
     return (
       <Componente>
-        daasdasd
         {this.paginas()}
       </Componente>
     );
