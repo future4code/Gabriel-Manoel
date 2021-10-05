@@ -6,8 +6,8 @@ const Header = styled.header`
   grid-template-columns: 1fr 94px;
   align-items: center;
   justify-items: center;
-  border-botton:1px solid;
-  height:50px;
+  border-botton: 1px solid;
+  height: 50px;
 `;
 
 export default class MatchesPage extends React.Component {
