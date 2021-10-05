@@ -35,9 +35,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Componente>
+      <div>
+        <Componente>
         {this.paginas()}
+        
       </Componente>
+      <button>limpa</button>
+      </div>
     );
+    
   }
 }

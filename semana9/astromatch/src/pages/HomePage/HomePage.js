@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import styled from "styled-components";
 import Passaro from "./img/images.jpg"
@@ -34,7 +35,28 @@ const Imagem = styled.img`
   
 `
 
+
 export default class HomePage extends React.Component {
+   
+  state= {
+    profile:""
+  }
+
+  
+
+  getProfile = () =>{
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-manoel-maryam/matches"
+    axios
+    .get(url)
+    .then((resposta)=>{
+      
+     console.log(resposta.data.profile)
+    })
+    .catch((erro)=>{
+      console.log(erro.response)
+    })
+  }
+
   render() {
     return (
       <div>
