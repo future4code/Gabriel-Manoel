@@ -1,25 +1,37 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react"
+import { ProfileListItem } from "../../../src/components/ProfileListItem"
+import { MatchesContainer, MatchesList } from './styled'
+import axios from 'axios'
 
-const Header = styled.header`
-  display: grid;
-  grid-template-columns: 1fr 94px;
-  align-items: center;
-  justify-items: center;
-  border-botton: 1px solid;
-  height: 50px;
-`;
 
-export default class MatchesPage extends React.Component {
-  render() {
+export const MatchesPage = () => {
+    const [matchesList, setMatchesList] = useState([])
+
+    useEffect(() => {
+        getMatchesList()
+    }, [matchesList])
+
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/leticia-chijo/matches"
+
+    const getMatchesList = () => {
+        axios.get(url)
+        .then((res) => {
+            setMatchesList(res.data.matches)
+        })
+        .catch((err) => {
+            console.log(err.response)
+        })
+    }
+
+    const list = matchesList.map((m) => {
+        return <ProfileListItem photo={m.photo} name={m.name}/>
+    })
+
     return (
-      <div>
-        <Header>
-          <spam>MatchesPage</spam>
-          <button onClick={this.props.Matches}>MatchesPage</button>
-        </Header>
-        <hr />
-      </div>
-    );
-  }
+        <MatchesContainer>
+            <MatchesList>
+                {list.length > 0 ? list : <div>Você não recebeu matches 💔</div>}
+            </MatchesList>
+        </MatchesContainer>
+    )
 }

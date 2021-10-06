@@ -1,75 +1,55 @@
+import React, {useState, useEffect} from "react";
+import {HomeContainer, Profile, ProfileImage} from "./styled"
 import axios from "axios";
-import React from "react";
-import styled from "styled-components";
-import Passaro from "./img/images.jpg"
 
-
-const Header = styled.header`
-  display: grid;
-  grid-template-columns: 1fr 70px;
-  align-items: center;
-  justify-items: center;
-  height:50px;
-`;
-
-const DivImagem = styled.div`
- height:520px;
- margin-top:22px;
- display:grid;
- justify-items:center;
- align-items:center;
- gap:13px;
- grid-template-rows:430px 80px;
-`
-
-const Curtida = styled.div`
-  height:80px;
-  width:430px;
-  display:flex;
-  justify-content: space-evenly;
-  align-items:center;
-`
-const Imagem = styled.img`
-  height:430px;
-  width:430px;
-  
-`
-
-
-export default class HomePage extends React.Component {
+export const HomePage = () =>{
    
-  state= {
-    profile:""
-  }
+    const[profile, setProfile] = useState({})
 
-  
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-manoel-maryam"
 
-  getProfile = () =>{
-    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-manoel-maryam/matches"
-    axios
-    .get(url)
-    .then((resposta)=>{
-      
-     console.log(resposta.data.profile)
-    })
-    .catch((erro)=>{
-      console.log(erro.response)
-    })
-  }
+    useEffect(()=>{
+        getProfile()
+    },[])
 
-  render() {
-    return (
-      <div>
-        <Header>
-          <span>HomePAge</span>
-          <button onClick={this.props.Home}>Home</button>
-        </Header>
-        <hr/>
-        <DivImagem>
-            <Imagem src={Passaro} alt="coruja" />
-            <Curtida><span>X</span> <span>X</span></Curtida>
-        </DivImagem>
-      </div>
-    );
-  }
+    const getProfile = () =>{
+        axios.get(`${url}/person`)
+        .then((res)=>{
+            setProfile(res.data.profile)
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+    }
+
+    const chosePerson = () =>{
+        const body ={
+            id: profile.id,
+            choice: profile.choice
+        }
+        axios.post(`${url}`, body)
+        .then((res)=>{
+            getProfile()
+            console.log(res.data)
+        })
+        .catch((err)=>{
+            console.log(err.resposta)
+        })
+    }
+
+    return(
+        <HomeContainer>
+           {!profile ? <div>Acabaram os perfis! Aperte o botão de limpar</div>:
+           <Profile>
+                <ProfileImage src={profile.photo}/>
+                <h2>{profile.name}, {profile.age}</h2>
+                <p>{profile.bio}</p>
+                <div>
+                    <button onClick={() => chosePerson(true)}>❌</button>
+                    <button onClick={() => chosePerson(false)}>💚</button>
+                </div>
+               
+           </Profile>}
+        </HomeContainer>
+    )
 }
