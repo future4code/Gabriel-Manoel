@@ -9,9 +9,9 @@ export const MatchesPage = () => {
 
     useEffect(() => {
         getMatchesList()
-    }, [matchesList])
+    }, [])
 
-    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/leticia-chijo/matches"
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-manoel-maryam/matches"
 
     const getMatchesList = () => {
         axios.get(url)

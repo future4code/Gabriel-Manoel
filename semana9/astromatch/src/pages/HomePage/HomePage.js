@@ -22,12 +22,14 @@ export const HomePage = () =>{
         })
     }
 
+    
+
     const chosePerson = () =>{
         const body ={
             id: profile.id,
             choice: profile.choice
         }
-        axios.post(`${url}`, body)
+        axios.post(`${url}/choose-person`, body)
         .then((res)=>{
             getProfile()
             console.log(res.data)
