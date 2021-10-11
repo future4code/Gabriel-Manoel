@@ -13,6 +13,7 @@ const App = () => {
       setCurrentPage("home")
     }
   }
+
   
   const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-manoel-maryam/clear"
 
@@ -29,7 +30,7 @@ const App = () => {
   return(
     <div>
       {currentPage === "home" ?  <HomePage /> :  <MatchesPage />}
-      <button onClick={changePage}>{currentPage === "home" ? "Ir para Matches" : "Ir para Home"}</button>
+      <button onClick={changePage}>{currentPage === "home" ?  "Matches" :"Home" }</button>
       <button onClick={cleanMatches}>Limpar Matches</button>
     </div>
   )
