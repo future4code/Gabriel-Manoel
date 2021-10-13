@@ -5,14 +5,10 @@ export const AreaAdmin = () => {
   const History = useHistory();
 
   const gotoAboutHome = () => {
-    History.push("/Home");
+    History.push("/Home")
    
-  };
-   
-  // const gotoAboutAdmin = () =>{
-  //   History.push("/Admin")
-  // }
-  return (
+  }
+   return (
     <div>
       <h1>Admin</h1>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 
-export const Home = () =>{
+export const Home = () => {
 
 
        const History = useHistory();
