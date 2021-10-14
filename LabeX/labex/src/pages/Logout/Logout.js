@@ -20,16 +20,16 @@ export const Logout =  () => {
 
    const onLogout = () => {
        console.log(email, password)
-    //    const body = {
-    //     email: email,
-    //     password: password
-    // }
-    //    axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-manoel-maryam/login", body)
-    //    .then((res)=>{
-    //        console.log(res.data)
-    //    }).catch((err)=>{
-    //        console.log(err.response)
-    //    })
+       const body = {
+        email: email,
+        password: password
+    }
+       axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-manoel-maryam/login", body)
+       .then((res)=>{
+           console.log(res.data)
+       }).catch((err)=>{
+           console.log(err.response)
+       })
       
    }
    
