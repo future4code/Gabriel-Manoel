@@ -5,16 +5,26 @@ export const AreaAdmin = () => {
   const History = useHistory();
 
   const gotoAboutHome = () => {
-    History.push("/Home")
-   
+    History.push("/");
   }
+
+  const gotoAboutCriarViagem = () =>{
+    History.push("/CriarViagem")
+  }
+
+  const gotoAboutLogout = () =>{
+    History.push("/Logout")
+  }
+
+   
+
    return (
     <div>
       <h1>Admin</h1>
 
       <button onClick={gotoAboutHome}>Voltar</button>
-      <button>Criar Viagem</button>
-      <button>Logout</button>
+      <button onClick={gotoAboutCriarViagem}>Criar Viagem</button>
+      <button onClick={gotoAboutLogout}>Logout</button>
     </div>
   );
 };

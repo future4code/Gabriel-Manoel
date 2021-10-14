@@ -2,23 +2,22 @@ import React from "react";
 import { useHistory } from "react-router";
 
 
-export const Viagens = () => {
+export const CriarViagens = () => {
     const History = useHistory();
       
     const gotoAboutViagens = () => {
       History.push("/");
     };
 
-    const gotoAboutInscrever = () =>{
-        History.push("/Inscrever")
-    }
+
 
     return(
         <div>
+            <h1>Criar viagem</h1>
             
             <button onClick={gotoAboutViagens}>Voltar</button>
-            <button onClick={gotoAboutInscrever}>Inscrever-se</button>
-            <h1>Lista de Viagens</h1>
+            
+           
         </div>
     )
 }
