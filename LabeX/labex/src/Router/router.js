@@ -6,15 +6,15 @@ import { Viagens } from "../pages/Viagens/Viagens";
 
 export const Router = () => {
   return (
+      
     <BrowserRouter>
       <Switch>
         <Route exact path={"/Home"}>
-        <Home />
-        
+          <Home />
         </Route>
 
         <Route exact path={"/Admin"}>
-        <AreaAdmin />
+          <AreaAdmin />
         </Route>
 
         <Route exact path={"/Viagens"}>
@@ -22,9 +22,10 @@ export const Router = () => {
         </Route>
 
         <Route exact path={"/Cadastro"}>
-         <Cadastro/>
+          <Cadastro />
         </Route>
       </Switch>
+
     </BrowserRouter>
   );
 };

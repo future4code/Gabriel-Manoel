@@ -1,7 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router";
-export const Viagens = () =>{
-    let History = useHistory();
+
+
+export const Viagens = () => {
+    const History = useHistory();
       
     const gotoAboutViagens = () => {
       History.push("/Home");
