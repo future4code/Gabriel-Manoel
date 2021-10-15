@@ -1,24 +1,57 @@
+import axios from "axios";
 import React from "react";
-import { useHistory } from "react-router";
+import { useEffect } from "react-router";
+import { useHistory } from "react-router-dom";
+
+
+const useProtectedPage = () => {
+    const history = useHistory();
+  
+    useEffect(() => {
+      const token = localStorage.getItem("token");
+  
+      if (token === null) {
+        console.log("Não está logado!!!");
+        history.push("/login");
+      }
+    }, []);
+  };
 
 
 export const Viagens = () => {
-    const History = useHistory();
-      
-    const gotoAboutViagens = () => {
-      History.push("/");
-    };
+    useProtectedPage();
+  useEffect(() => {
+    axios.get(
+      "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trip/3bUbdB1gvPzWrThpazVC",
+      {
+        headers: {
+          auth: token,
+        },
+      }
+    );
+  })
+    .then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log("Deu erro: ", err.response);
+    }, []);
 
-    const gotoAboutInscrever = () =>{
-        History.push("/Inscrever")
-    }
+  const History = useHistory();
 
-    return(
-        <div>
-            
-            <button onClick={gotoAboutViagens}>Voltar</button>
-            <button onClick={gotoAboutInscrever}>Inscrever-se</button>
-            <h1>Lista de Viagens</h1>
-        </div>
-    )
-}
+  const gotoAboutViagens = () => {
+    History.push("/");
+  };
+
+  const gotoAboutInscrever = () => {
+    History.push("/Inscrever");
+  };
+
+  return (
+    <div>
+      <button onClick={gotoAboutViagens}>Voltar</button>
+      <button onClick={gotoAboutInscrever}>Inscrever-se</button>
+      <h1>Lista de Viagens</h1>
+    </div>
+  );
+};
