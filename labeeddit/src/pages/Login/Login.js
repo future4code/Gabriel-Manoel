@@ -4,10 +4,11 @@ import api from "../../api/api";
 
 const Login = () => {
   const [form, onChange, clear] = useState({ email: "", password: ""});
+  
 
   const onSubmitForm = (event) => {
-    login() 
-    // console.log(form) 
+    // login() 
+    console.log(form) 
     event.preventDefault()
   };
 
@@ -19,7 +20,7 @@ const Login = () => {
 
   const login = () =>{
      api
-      .post(`${form}`)
+      .post(`https://labeddit.herokuapp.com/${form}`)
       .then((resposta)=>resposta.data)
   }
  
