@@ -3,14 +3,19 @@ import { useHistory } from "react-router";
 import api from "../../api/api";
 
 const Login = () => {
-  const [form, onChange, clear] = useState({ email: "", password: ""});
+  const [form, setForm,clear] = useState({ email: "", password: ""});
   
 
   const onSubmitForm = (event) => {
-    // login() 
+    login() 
     console.log(form) 
     event.preventDefault()
   };
+
+  const updateSearchInput = e => {
+    setForm(e.target.value);
+  };
+  
 
   const history = useHistory()
   
@@ -20,7 +25,7 @@ const Login = () => {
 
   const login = () =>{
      api
-      .post(`https://labeddit.herokuapp.com/${form}`)
+      .post(`https://labeddit.herokuapp.com/`,form)
       .then((resposta)=>resposta.data)
   }
  
@@ -30,8 +35,8 @@ const Login = () => {
       <form onSubmit={onSubmitForm}>
         <input
           name="email"
-          value={form.email}
-          onChange={onChange}
+          
+          onChange={updateSearchInput}
           required
           type="email"
           placeholder="email"
@@ -39,8 +44,8 @@ const Login = () => {
         <br />
         <input
           name="password"
-          value={form.password}
-          onChange={onChange}
+         
+          onChange={updateSearchInput}
           required
           type="password"
           placeholder="senha"

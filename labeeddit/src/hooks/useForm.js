@@ -9,6 +9,7 @@ const Useform = (initialState) =>{
        
        
     }
+   
     const clear = () =>{
         setForm(initialState)
     }
