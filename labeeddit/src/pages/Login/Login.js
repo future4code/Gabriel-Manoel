@@ -1,51 +1,52 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import api from "../../api/api";
+
 
 const Login = () => {
-  const [form, setForm,clear] = useState({ email: "", password: ""});
-  
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
-  const onSubmitForm = (event) => {
-    login() 
-    console.log(form) 
-    event.preventDefault()
-  };
-
-  const updateSearchInput = e => {
-    setForm(e.target.value);
-  };
-  
-
-  const history = useHistory()
-  
-  const handleClikc = () =>{
-      history.push("/cadastro")
+  const handleLogin = e =>{
+    login()
+    e.preventDefault()
+   console.log(email, password)
   }
 
   const login = () =>{
-     api
-      .post(`https://labeddit.herokuapp.com/`,form)
+     axios
+      .post(`https://labeddit.herokuapp.com/${email}/${password}`)
       .then((resposta)=>resposta.data)
+      .catch((err)=>{
+        if(err.response.status === 404) {
+          console.log(err);
+        }
+      });
+
+      
   }
+
+  const history = useHistory()
+    const handleClikc = () =>{
+        history.push("/cadastro")
+    }
  
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit={onSubmitForm}>
+      <form onSubmit={handleLogin}>
         <input
           name="email"
-          
-          onChange={updateSearchInput}
+          value={email}
+          onChange={(e)=> setEmail(e.target.value)}
           required
-          type="email"
           placeholder="email"
         />
         <br />
         <input
           name="password"
-         
-          onChange={updateSearchInput}
+          value={password}
+          onChange={(e)=> setPassword(e.target.value)}
           required
           type="password"
           placeholder="senha"
