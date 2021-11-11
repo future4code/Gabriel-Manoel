@@ -2,18 +2,37 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 const Home = () => {
-  const [tarot, setTarot] = useState([]);
-  console.log(tarot);
+  const [tarots, setTarot] = useState([]);
+  const [imageCard, setImageBackCard] = useState(" ")
+  console.log(tarots);
+  
+  const endereco = "dados/tarot.json";
 
   useEffect(() => {
-    fetch("/public/tarot.json")
-      .then((tarot) => setTarot(tarot))
+    axios
+      .get(endereco)
+      .then((response) => {
+        setTarot(response.data.cards);
+        setImageBackCard(response.data.imageBackCard)
+      })
       .catch((error) => {
-        document.write(error);
+        console.log(error);
       });
   }, []);
 
-  return <div>gf</div>;
+  return (
+    <div>
+      <ul>
+        {tarots.map((tarot) => (
+          <li key={tarot.name}>{tarot.name}
+          <img src={tarot.imageBackCard}/>
+          </li>
+
+          
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Home;
